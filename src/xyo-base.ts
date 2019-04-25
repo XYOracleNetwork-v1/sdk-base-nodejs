@@ -23,4 +23,5 @@ export class XyoBase  {
   protected logDebug (msg: string) {
     log.logDebug(msg, this.constructor.name)
   }
+
 }

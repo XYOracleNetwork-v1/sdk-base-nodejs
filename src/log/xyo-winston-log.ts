@@ -1,12 +1,10 @@
 import { IXyoLog } from './xyo-log'
 import winston from 'winston'
 
-// XYO_LOG_ERROR=false/true
-// XYO_LOG_INFO=false/true
-// XYO_LOG_WARN=false/true
-// XYO_LOG_VERBOSE=false/true
-// XYO_LOG_DEBUG=false/true
-// XYO_LOG_PATH
+// XYO_LOG=""
+// XYO_CONSOLE
+// XYO_LOG_PATH=""
+// XYO_LOG_NAME=""
 
 export class XyoWinstonLogger implements IXyoLog {
 
@@ -21,28 +19,21 @@ export class XyoWinstonLogger implements IXyoLog {
   }
 
   private static getWinstonTransports (): any[]  {
-    const transports: any[] = [new winston.transports.Console()]
+    const consoleType = process.env.XYO_CONSOLE || 'info'
+    const logTypes = process.env.XYO_LOG || 'error'
+    const logName = process.env.XYO_LOG_NAME || 'all'
+
+    const consoleLogger = new winston.transports.Console({
+      level: consoleType
+    })
+
+    const transports: any[] = [consoleLogger]
     const path = process.env.XYO_LOG_PATH || './'
 
-    if (process.env.XYO_LOG_ERROR === 'true') {
-      transports.push(new winston.transports.File({ filename: `${path}/error.log`, level: 'error' }))
-    }
-
-    if (process.env.XYO_LOG_INFO === 'true') {
-      transports.push(new winston.transports.File({ filename: `${path}/info.log`, level: 'info' }))
-    }
-
-    if (process.env.XYO_LOG_WARN === 'true') {
-      transports.push(new winston.transports.File({ filename: `${path}/warn.log`, level: 'warn' }))
-    }
-
-    if (process.env.XYO_LOG_VERBOSE === 'true') {
-      transports.push(new winston.transports.File({ filename: `${path}/verbose.log`, level: 'verbose' }))
-    }
-
-    if (process.env.XYO_LOG_DEBUG === 'true') {
-      transports.push(new winston.transports.File({ filename: `${path}/debug.log`, level: 'debug' }))
-    }
+    transports.push(new winston.transports.File({
+      filename: `${path}/${logName}.log`,
+      level: logTypes
+    }))
 
     return transports
   }
