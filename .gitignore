@@ -87,3 +87,6 @@ scratch.js
 
 payondelivery/
 *.tsbuildinfo
+
+# log testing file
+./test.js
