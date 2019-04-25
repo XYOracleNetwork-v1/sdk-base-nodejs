@@ -18,4 +18,4 @@ You can access the logger from `XyoBase` or from an instance of `IXyoLog`. Loggi
 * Debug
 * Silly
 
-You can change the logging level for the console, and for the log file by changing the environment vars: `XYO_LOG` (for logs), and `XYO_CONSOLE` (for console). The path and name of the log can be changed with the environment vars: `XYO_LOG_PATH` and `XYO_LOG_NAME`.
+You can change the logging level for the console and for the log file by changing the environment vars: `XYO_LOG` (for logs), and `XYO_CONSOLE` (for console). The path and name of the log can be changed with the environment vars: `XYO_LOG_PATH` and `XYO_LOG_NAME`.
