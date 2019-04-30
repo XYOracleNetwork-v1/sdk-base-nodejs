@@ -14,6 +14,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: yarn publish --patch
+  script: npm publish
   on:
     branch: master
