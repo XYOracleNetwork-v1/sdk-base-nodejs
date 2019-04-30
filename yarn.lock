@@ -367,10 +367,10 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.12.tgz#45dd1d0638e8c8f153e87d296907659296873916"
   integrity sha512-SOhuU4wNBxhhTHxYaiG5NY4HBhDIDnJF60GU+2LqHAdKKer86//e4yg69aENCtQ04n0ovz+tq2YPME5t5yp4pw==
 
-"@xyo-network/config-tslint@^0.1.15":
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/@xyo-network/config-tslint/-/config-tslint-0.1.15.tgz#cb4af30d61fed2b8a134fd1c8ff099cb1ba60766"
-  integrity sha512-1Wn0fRucKMgXFshajeSLw2JkCfKg3WMMxG7LlyZ0LeDVrWZFUrFrQh5EYrsNhdnSpWQfDW5CDwa0+GttEj57/g==
+"@xyo-network/config-tslint@^0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/@xyo-network/config-tslint/-/config-tslint-0.1.18.tgz#6900f88280c56282d7b9239395bbe86a2c49887c"
+  integrity sha512-qiDNbITBxJEznj9GyFgTRp4LxZzh/rorLhudEYII65OnOnimWSrx+Hcxa8DLCJoGGGS/zq0Yf6vwc/8a7WUOrw==
   dependencies:
     tslint-config-airbnb "^5.11.0"
     tslint-react "^4.0.0"
