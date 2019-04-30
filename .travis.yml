@@ -9,7 +9,7 @@ install:
   - yarn install
 script:
   - yarn build
-before_install:
+before_deploy:
   - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 deploy:
   provider: script
