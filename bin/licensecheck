@@ -2,4 +2,4 @@
 
 // tslint:disable
 
-var checker = require('../script/licensecheck.js');
+var checker = require('../scripts/licensecheck.js');

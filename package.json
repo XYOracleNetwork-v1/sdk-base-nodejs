@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "description": "Base util inspired by XYO",
   "main": "dist/index.js",
   "files": [
@@ -22,7 +22,7 @@
     "build": "tsc -b",
     "lint": "tslint -c tslint.json -p ./tsconfig.json",
     "test": "yarn lint && yarn license",
-    "license": "node ./scripts/licensecheck.js"
+    "licensecheck": "node ./scripts/licensecheck.js"
   },
   "devDependencies": {
     "@types/jest": "24.0.12",
