@@ -18,7 +18,9 @@ const allowedLicense = [
 return new Promise((resolve, reject) => {
   checker.init({
     start: './',
-    onlyAllow: allowedLicense.join(';')
+    onlyAllow: allowedLicense.join(';'),
+    production: true,
+    direct: true
   }, function(err, packages) {
       if (err) {
           reject(err)
