@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "Base util inspired by XYO",
   "main": "dist/index.js",
   "files": [
@@ -10,6 +10,9 @@
     "tsconfig.json",
     "tslint.json"
   ],
+  "bin": {
+    "licensecheck": "./bin/licensecheck"
+  },
   "types": "dist/index.d.ts",
   "repository": "https://github.com/XYOracleNetwork/sdk-objectmodel-nodejs",
   "author": "Carter Harrison",
