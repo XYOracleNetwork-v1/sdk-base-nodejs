@@ -14,6 +14,7 @@ export interface IXyoPlugin {
 export interface IXyoConfig {
   port: number,
   plugins: IXyoPluginConfig[],
+}
 
 export interface IXyoPluginConfig {
   packageName: string
