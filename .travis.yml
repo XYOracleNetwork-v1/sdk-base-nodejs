@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 10
+- "10"
 cache:
   yarn: true
   directories:
@@ -9,3 +9,10 @@ install:
   - yarn install
 script:
   - yarn build
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
+  on:
+    branch: master

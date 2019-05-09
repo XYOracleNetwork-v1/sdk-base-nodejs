@@ -8,7 +8,7 @@ import winston from 'winston'
 
 export class XyoWinstonLogger implements IXyoLog {
 
-  public static buildLogger (): winston.Logger {
+  public static buildLogger(): winston.Logger {
     return winston.createLogger({
       transports: XyoWinstonLogger.getWinstonTransports(),
       format: winston.format.combine(
@@ -18,7 +18,7 @@ export class XyoWinstonLogger implements IXyoLog {
     })
   }
 
-  private static getWinstonTransports (): any[]  {
+  private static getWinstonTransports(): any[]  {
     const consoleType = process.env.XYO_CONSOLE || 'info'
     const logTypes = process.env.XYO_LOG || 'error'
     const logName = process.env.XYO_LOG_NAME || 'all'
@@ -40,7 +40,7 @@ export class XyoWinstonLogger implements IXyoLog {
 
   private logger = XyoWinstonLogger.buildLogger()
 
-  public logInfo (msg: string, tag?: string) {
+  public logInfo(msg: string, tag?: string) {
     this.logger.info(msg, tag)
   }
 
