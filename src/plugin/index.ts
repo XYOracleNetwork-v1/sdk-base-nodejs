@@ -8,7 +8,12 @@ export interface IXyoPlugin {
   getName(): string
   getProvides(): string[]
   getPluginDependencies(): string[]
-  initialize(deps: { [key: string]: any; }, config: any, graphql?: IXyoGraphQlDelegate): Promise<boolean>
+
+  initialize(
+    deps: { [key: string]: any; },
+    config: any, graphql?: IXyoGraphQlDelegate,
+    mutex?: IXyoBoundWitnessMutexDelegate
+  ): Promise<boolean>
 }
 
 export interface IXyoConfig {
@@ -26,4 +31,9 @@ export interface IXyoGraphQlDelegate {
   addType(type: string): void
   addQuery(queryString: string): void
   addResolver(query: string, resolver: any): void
+}
+
+export interface IXyoBoundWitnessMutexDelegate {
+  acquireMutex (): boolean
+  releaseMutex (): boolean
 }
