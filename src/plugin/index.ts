@@ -34,6 +34,6 @@ export interface IXyoGraphQlDelegate {
 }
 
 export interface IXyoBoundWitnessMutexDelegate {
-  acquireMutex (): boolean
-  releaseMutex (): boolean
+  acquireMutex(): boolean
+  releaseMutex(): boolean
 }
