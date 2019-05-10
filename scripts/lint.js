@@ -13,7 +13,10 @@ if (!fs.existsSync(prefix)) {
 }
 
 console.log(chalk.green('XY Typescript Linting'))
-let buildResult = spawnSync('tslint', ['-c', `${prefix}tslint.json`, '-p', `${prefix}tsconfig.json`], {
+if (prefix.length > 0) {
+  fs.copySync(`${prefix}tslint.json`, `tslint.json`)
+}
+let buildResult = spawnSync('tslint', ['-c', `tslint.json`, '-p', `tsconfig.json`], {
   stdio: 'inherit'
 })
 
