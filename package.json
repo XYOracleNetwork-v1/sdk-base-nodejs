@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Base util inspired by XYO",
   "main": "dist/index.js",
   "files": [
@@ -14,7 +14,9 @@
     "licensecheck": "./bin/licensecheck",
     "hooks": "./bin/hooks",
     "build": "./bin/build",
-    "lint": "./bin/lint"
+    "lint": "./bin/lint",
+    "xybuild": "./bin/build",
+    "xylint": "./bin/lint"
   },
   "types": "dist/index.d.ts",
   "repository": "https://github.com/XYOracleNetwork/sdk-objectmodel-nodejs",
@@ -25,6 +27,9 @@
     "build": "node ./scripts/build.js",
     "lint": "node ./scripts/lint.js",
     "test": "yarn lint && yarn license",
+    "xybuild": "node ./scripts/build.js",
+    "xylint": "node ./scripts/lint.js",
+    "xytest": "yarn lint && yarn license",
     "licensecheck": "node ./scripts/licensecheck.js",
     "hooks": "node ./scripts/hooks.js"
   },
