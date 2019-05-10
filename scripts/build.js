@@ -23,7 +23,10 @@ if (hooksResult.status !== 0) {
 }
 
 console.log(chalk.gray('Compiling Typescript'))
-let buildResult = spawnSync('tsc', ['-b', `${prefix}tsconfig.json`], {
+if (prefix.length > 0) {
+  fs.copySync(`${prefix}tsconfig.json`, `tsconfig.json`)
+}
+let buildResult = spawnSync('tsc', ['-b'], {
   stdio: 'inherit'
 })
 
