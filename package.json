@@ -1,12 +1,13 @@
 {
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Base util inspired by XYO",
   "main": "dist/index.js",
   "files": [
     "dist",
     "scripts",
     "bin",
+    "hooks",
     "tsconfig.json",
     "tslint.json"
   ],
