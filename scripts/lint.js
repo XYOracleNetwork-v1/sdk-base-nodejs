@@ -17,7 +17,7 @@ let buildResult = spawnSync('tslint', ['-c', `${prefix}tslint.json`, '-p', `${pr
   stdio: 'inherit'
 })
 
-if (buildResult.status != 0) {
+if (buildResult.status !== 0) {
   console.log(chalk.red(`XY Typescript Linting: Failed`))
   return buildResult.status
 }

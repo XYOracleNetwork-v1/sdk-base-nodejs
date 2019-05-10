@@ -18,7 +18,7 @@ let hooksResult = spawnSync('yarn', ['hooks'], {
   stdio: 'inherit'
 })
 
-if (hooksResult.status != 0) {
+if (hooksResult.status !== 0) {
   return hooksResult.status
 }
 
@@ -27,7 +27,7 @@ let buildResult = spawnSync('tsc', ['-b', `${prefix}tsconfig.json`], {
   stdio: 'inherit'
 })
 
-if (buildResult.status != 0) {
+if (buildResult.status !== 0) {
   console.log(chalk.red(`XY Typescript Build: Failed`))
   return buildResult.status
 }
@@ -36,7 +36,7 @@ let lintResult = spawnSync('yarn', ['lint'], {
   stdio: 'inherit'
 })
 
-if (lintResult.status != 0) {
+if (lintResult.status !== 0) {
   return lintResult.status
 }
 
