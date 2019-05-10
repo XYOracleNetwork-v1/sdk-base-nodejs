@@ -19,6 +19,7 @@
     "interface-name": [true, "always-prefix"],
     "align": [true, "parameters", "arguments", "members", "elements", "statements"],
     "space-before-function-paren": [true, "never"],
+    "prefer-array-literal": false,
     "import-name": [
       true, {
         "lodash": "_",
