@@ -18,6 +18,7 @@ export interface IXyoPlugin {
 
 export interface IXyoConfig {
   port: number,
+  remote: IXyoRemoteConfig[],
   plugins: IXyoPluginConfig[],
 }
 
@@ -25,6 +26,12 @@ export interface IXyoPluginConfig {
   packageName: string
   config: any
   path?: string
+}
+
+export interface IXyoRemoteConfig {
+  type: string
+  name: string
+  version: string
 }
 
 export interface IXyoGraphQlDelegate {
