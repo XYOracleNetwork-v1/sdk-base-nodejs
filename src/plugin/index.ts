@@ -4,16 +4,18 @@ export interface IXyoPluginWithConfig {
   plugin: IXyoPlugin
 }
 
+export interface IXyoPluginDelegate {
+  deps: { [key: string]: any; },
+  config: any,
+  graphql: IXyoGraphQlDelegate,
+  mutex: IXyoBoundWitnessMutexDelegate
+}
+
 export interface IXyoPlugin {
   getName(): string
   getProvides(): string[]
   getPluginDependencies(): string[]
-
-  initialize(
-    deps: { [key: string]: any; },
-    config: any, graphql?: IXyoGraphQlDelegate,
-    mutex?: IXyoBoundWitnessMutexDelegate
-  ): Promise<boolean>
+  initialize(delegate: IXyoPluginDelegate): Promise<boolean>
 }
 
 export interface IXyoConfig {
@@ -22,9 +24,8 @@ export interface IXyoConfig {
 }
 
 export interface IXyoPluginConfig {
-  packageName: string
+  type: string,
   config: any
-  path?: string
 }
 
 export interface IXyoGraphQlDelegate {
