@@ -43,7 +43,7 @@ You can change the logging level for the console and for the log file by changin
 
 ## License
 
-See the [LICENSE.md](LICENSE) file for license details.
+See the [LICENSE.md](LICENSE) file for license details
 
 ## Credits
 
