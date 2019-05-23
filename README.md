@@ -13,14 +13,13 @@
 ## Table of Contents
 
 -   [Title](#sdk-base-nodejs)
--   [Short Description](#short-description)
--   [Long Description](#long-description)
+-   [Description](#description)
 -   [Logging](#logging)
 -   [Maintainers](#maintainers)
 -   [License](#license)
 -   [Credits](#credits)
 
-## Short Description
+## Description
 
 A core util/logging library inspired by XYO.
 
