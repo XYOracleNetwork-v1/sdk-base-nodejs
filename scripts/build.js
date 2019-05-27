@@ -9,6 +9,7 @@ const fs = require('fs-extra')
 let prefix = "node_modules/@xyo-network/sdk-base-nodejs/"
 
 if (!fs.existsSync(prefix)) {
+  //this means we are actually building the sdk-base-nodejs project
   prefix = ''
 }
 
@@ -23,8 +24,9 @@ if (hooksResult.status !== 0) {
 }
 
 console.log(chalk.gray('Compiling Typescript'))
-if (prefix.length > 0) {
-  fs.copySync(`${prefix}tsconfig.json`, `tsconfig.json`)
+if (!fs.existsSync(`tsconfig.json`)) {
+  console.log(chalk.yellow('No tsconfig.json found. Creating...'))
+  fs.copySync(`${prefix}templates/tsconfig.json`, `tsconfig.json`)
 }
 let buildResult = spawnSync('tsc', ['-b'], {
   stdio: 'inherit'
