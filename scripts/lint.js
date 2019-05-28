@@ -13,9 +13,17 @@ if (!fs.existsSync(prefix)) {
 }
 
 console.log(chalk.green('XY Typescript Linting'))
-if (prefix.length > 0) {
-  fs.copySync(`${prefix}tslint.json`, `tslint.json`)
+
+if (!fs.existsSync(`tslint.json`)) {
+  console.log(chalk.yellow('No tslint.json found. Creating...'))
+  fs.copySync(`${prefix}templates/tslint.json`, `tslint.json`)
 }
+
+if (!fs.existsSync(`tsconfig.json`)) {
+  console.log(chalk.yellow('No tsconfig.json found. Creating...'))
+  fs.copySync(`${prefix}templates/tsconfig.json`, `tsconfig.json`)
+}
+
 let buildResult = spawnSync('tslint', ['-c', `tslint.json`, '-p', `tsconfig.json`], {
   stdio: 'inherit'
 })
