@@ -1,9 +1,10 @@
 {
+  "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
     "lib": [
-      "esnext", "dom"
+      "esnext"
     ],
     "declaration": true,
     "declarationMap": true,
