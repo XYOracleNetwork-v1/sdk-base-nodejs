@@ -1,5 +1,6 @@
-var checker = require('license-checker');
- 
+#!/usr/bin/env node
+const checker = require('license-checker');
+
 const allowedLicense = [
   'MIT',
   'BSD',
@@ -13,25 +14,24 @@ const allowedLicense = [
   'CC0-1.0',
   'LGPL-3.0',
   'WTFPL',
-  'CC-BY-3.0'
-]
+  'CC-BY-3.0',
+];
 
 const excludePackages = [
-  '@apollographql/graphql-playground-html@1.6.6'
-]
+  '@apollographql/graphql-playground-html@1.6.6',
+];
 
-return new Promise((resolve, reject) => {
-  checker.init({
-    start: './',
-    onlyAllow: allowedLicense.join(';'),
-    excludePackages: excludePackages.join(';'),
-    production: true
-  }, function(err, packages) {
-      if (err) {
-          reject(err)
-      } else {
-          console.log('License Check Passed')
-          resolve(packages)
-      }
-  })
-})
+checker.init({
+  start: './',
+  onlyAllow: allowedLicense.join(';'),
+  excludePackages: excludePackages.join(';'),
+  production: true,
+}, (err) => {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  } else {
+    console.log('License Check Passed');
+    process.exit(0);
+  }
+});
