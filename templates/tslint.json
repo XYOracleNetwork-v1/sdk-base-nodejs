@@ -1,6 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/tslint",
-  "extends": ["node_modules/@xyo-network/sdk-base-nodejs/tslint.json"],
+  "extends": ["@xyo-network/sdk-base-nodejs/tslint.json"],
   "rules": {
   }
 }
