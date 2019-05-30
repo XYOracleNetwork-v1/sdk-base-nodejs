@@ -90,3 +90,4 @@ payondelivery/
 
 # log testing file
 ./test.js
+\.idea/
