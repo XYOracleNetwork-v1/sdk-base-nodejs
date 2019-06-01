@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "description": "Base util inspired by XYO",
   "main": "dist/index.js",
   "files": [
@@ -22,14 +22,14 @@
   },
   "types": "dist/index.d.ts",
   "repository": "https://github.com/XYOracleNetwork/sdk-objectmodel-nodejs",
-  "author": "Carter Harrison",
+  "author": "XYO Development Team",
   "license": "LGPL-3.0",
   "private": false,
   "scripts": {
     "build": "node ./scripts/build.js",
     "lint": "node ./scripts/lint.js",
     "xyeslint": "eslint ./scripts",
-    "test": "yarn lint && yarn license",
+    "test": "yarn lint && yarn licensecheck",
     "xybuild": "node ./scripts/build.js",
     "xylint": "node ./scripts/lint.js",
     "xytest": "yarn lint && yarn license",
@@ -37,7 +37,6 @@
     "hooks": "node ./scripts/hooks.js"
   },
   "dependencies": {
-    "@types/jest": "24.0.12",
     "@types/node": "^11.13.8",
     "chalk": "^2.4.2",
     "eslint": "^5.16.0",
@@ -47,7 +46,6 @@
     "eslint-plugin-react": "^7.13.0",
     "fs-extra": "^7.0.1",
     "global": "^4.3.2",
-    "jest": "^24.7.1",
     "license-checker": "^25.0.1",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.1.0",
@@ -60,5 +58,8 @@
     "coverageReporters": [
       "lcov"
     ]
+  },
+  "peerDependencies": {
+    "jest": "^23.6.0"
   }
 }
