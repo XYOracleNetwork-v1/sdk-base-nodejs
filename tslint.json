@@ -1,6 +1,15 @@
 {
   "$schema": "http://json.schemastore.org/tslint",
   "extends": ["tslint-config-airbnb"],
+  "linterOptions": {
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+  },
+  "jsRules": {
+    "no-console": false
+  },
   "rules": {
     "no-inferrable-types": [true, "ignore-params"],
     "trailing-comma": false,
