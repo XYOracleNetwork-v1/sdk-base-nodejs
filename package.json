@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.5.7",
+  "version": "0.5.12",
   "description": "Base util inspired by XYO",
   "main": "dist/index.js",
   "files": [
@@ -8,6 +8,7 @@
     "scripts",
     "bin",
     "hooks",
+    "templates",
     "tsconfig.json",
     "tslint.json"
   ],
@@ -21,38 +22,39 @@
   },
   "types": "dist/index.d.ts",
   "repository": "https://github.com/XYOracleNetwork/sdk-objectmodel-nodejs",
-  "author": "Carter Harrison",
+  "author": "XYO Development Team",
   "license": "LGPL-3.0",
   "private": false,
   "scripts": {
     "build": "node ./scripts/build.js",
     "lint": "node ./scripts/lint.js",
-    "test": "yarn lint && yarn license",
+    "xyeslint": "eslint ./scripts",
+    "test": "yarn lint && yarn licensecheck",
     "xybuild": "node ./scripts/build.js",
     "xylint": "node ./scripts/lint.js",
     "xytest": "yarn lint && yarn license",
     "licensecheck": "node ./scripts/licensecheck.js",
     "hooks": "node ./scripts/hooks.js"
   },
-  "devDependencies": {
-    "@types/jest": "24.0.12",
-    "@types/node": "^11.13.8",
-    "@xyo-network/config-tslint": "^0.1.31",
-    "jest": "^24.7.1",
-    "license-checker": "^25.0.1",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^8.1.0",
-    "tslint": "^5.16.0",
-    "typescript": "^3.4.5"
-  },
   "dependencies": {
+    "@types/node": "^11.13.8",
     "chalk": "^2.4.2",
     "fs-extra": "^7.0.1",
+    "global": "^4.3.2",
+    "license-checker": "^25.0.1",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.4.5",
     "winston": "3.2.1"
   },
   "jest": {
     "coverageReporters": [
       "lcov"
     ]
+  },
+  "peerDependencies": {
+    "jest": ">=^23.6.0",
+    "ts-jest": ">=^23.6.0"
   }
 }
