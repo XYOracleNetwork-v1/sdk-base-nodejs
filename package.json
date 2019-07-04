@@ -34,7 +34,9 @@
     "xylint": "node ./scripts/lint.js",
     "xytest": "yarn lint && yarn license",
     "licensecheck": "node ./scripts/licensecheck.js",
-    "hooks": "node ./scripts/hooks.js"
+    "hooks": "node ./scripts/hooks.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@types/node": "^11.13.8",
@@ -46,7 +48,8 @@
     "tslint": "^5.16.0",
     "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.4.5",
-    "winston": "3.2.1"
+    "winston": "3.2.1",
+    "snyk": "^1.189.0"
   },
   "jest": {
     "coverageReporters": [
@@ -56,5 +59,6 @@
   "peerDependencies": {
     "jest": ">=^23.6.0",
     "ts-jest": ">=^23.6.0"
-  }
+  },
+  "snyk": true
 }
