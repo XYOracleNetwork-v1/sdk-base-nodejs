@@ -6,10 +6,8 @@
 
 [![NPM](<https://img.shields.io/npm/v/@xyo-network/sdk-base-nodejs.svg>)](https://www.npmjs.com/package/@xyo-network/sdk-base-nodejs)
 
-![](https://github.com/XYOracleNetwork/sdk-base-nodejs/workflows/Build/badge.svg?branch=develop)
-[![Maintainability](https://api.codeclimate.com/v1/badges/7d316730bfdfbe4e1f73/maintainability)](https://codeclimate.com/repos/5cc23851684dee02400005ef/maintainability)
-[![DepShield Badge](https://depshield.sonatype.org/badges/XYOracleNetwork/sdk-base-nodejs/depshield.svg)](https://depshield.github.io)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/008ea5b134ea4a9195b8deedeaf1665d)](https://www.codacy.com/app/XYOracleNetwork/sdk-base-nodejs?utm_source=github.com&utm_medium=referral&utm_content=XYOracleNetwork/sdk-base-nodejs&utm_campaign=Badge_Grade) [![Known Vulnerabilities](https://snyk.io/test/github/XYOracleNetwork/sdk-base-nodejs/badge.svg?targetFile=package.json)](https://snyk.io/test/github/XYOracleNetwork/sdk-base-nodejs?targetFile=package.json)
+![](https://github.com/XYOracleNetwork/sdk-base-nodejs/workflows/Build/badge.svg?branch=develop) [![BCH compliance](https://bettercodehub.com/edge/badge/XYOracleNetwork/sdk-base-nodejs?branch=master)](https://bettercodehub.com/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/008ea5b134ea4a9195b8deedeaf1665d)](https://www.codacy.com/app/XYOracleNetwork/sdk-base-nodejs?utm_source=github.com&utm_medium=referral&utm_content=XYOracleNetwork/sdk-base-nodejs&utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/25a8e503bdda97775ab1/maintainability)](https://codeclimate.com/github/XYOracleNetwork/sdk-base-nodejs/maintainability)
+[![Known Vulnerabilities](https://snyk.io/test/github/XYOracleNetwork/sdk-base-nodejs/badge.svg?targetFile=package.json)](https://snyk.io/test/github/XYOracleNetwork/sdk-base-nodejs?targetFile=package.json)
 
 ## Table of Contents
 
