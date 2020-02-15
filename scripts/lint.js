@@ -15,9 +15,8 @@ if (!fs.existsSync(prefix)) {
 
 console.log(chalk.green('XY Typescript Linting'));
 
-if (!fs.existsSync('tslint.json')) {
-  console.log(chalk.yellow('No tslint.json found. Creating...'));
-  fs.copySync(`${prefix}templates/tslint.json`, 'tslint.json');
+if (!fs.existsSync('.eslintrc.js')) {
+  console.log(chalk.yellow('No eslintrc found!'));
 }
 
 if (!fs.existsSync('tsconfig.json')) {
@@ -25,7 +24,7 @@ if (!fs.existsSync('tsconfig.json')) {
   fs.copySync(`${prefix}templates/tsconfig.json`, 'tsconfig.json');
 }
 
-const buildResult = spawnSync('tslint', ['-c', 'tslint.json', '-p', 'tsconfig.json'], {
+const buildResult = spawnSync('tslint', ['-c', '.eslintrc.js', '-p', 'tsconfig.json'], {
   stdio: 'inherit',
 });
 
