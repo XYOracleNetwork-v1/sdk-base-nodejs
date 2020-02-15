@@ -14,7 +14,8 @@ module.exports = {
   },
   rules: {
     singleQuote: 0,
-    trailingComma: 0
+    trailingComma: 0,
+    semiColon: 0
   },
   settings: {
     react: {
