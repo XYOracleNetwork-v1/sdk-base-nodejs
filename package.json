@@ -31,7 +31,7 @@
     "xyeslint": "eslint ./scripts",
     "test": "yarn lint && yarn licensecheck",
     "xybuild": "node ./scripts/build.js",
-    "xylint": "node ./scripts/lint.js",
+    "xylint": "eslint --ext .js,.jsx,.ts,.tsx ./",
     "xytest": "yarn lint && yarn license",
     "licensecheck": "node ./scripts/licensecheck.js",
     "hooks": "node ./scripts/hooks.js"
