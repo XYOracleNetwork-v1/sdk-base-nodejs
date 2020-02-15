@@ -27,14 +27,15 @@
   "private": false,
   "scripts": {
     "build": "node ./scripts/build.js",
-    "lint": "node ./scripts/lint.js",
+    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
     "xyeslint": "eslint ./scripts",
     "test": "yarn lint && yarn licensecheck",
     "xybuild": "node ./scripts/build.js",
-    "xylint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "xylint": "yarn lint",
     "xytest": "yarn lint && yarn license",
     "licensecheck": "node ./scripts/licensecheck.js",
-    "hooks": "node ./scripts/hooks.js"
+    "hooks": "node ./scripts/hooks.js",
+    "prettier": "prettier"
   },
   "dependencies": {
     "@types/node": "^13.7.1",
@@ -45,6 +46,11 @@
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5",
     "winston": "^3.2.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.19.2",
