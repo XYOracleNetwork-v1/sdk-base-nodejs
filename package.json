@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Base util inspired by XYO",
   "main": "dist/index.js",
   "files": [
@@ -27,26 +27,39 @@
   "private": false,
   "scripts": {
     "build": "node ./scripts/build.js",
-    "lint": "node ./scripts/lint.js",
-    "xyeslint": "eslint ./scripts",
+    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "yarn lint && yarn licensecheck",
     "xybuild": "node ./scripts/build.js",
-    "xylint": "node ./scripts/lint.js",
+    "xylint": "yarn lint",
     "xytest": "yarn lint && yarn license",
     "licensecheck": "node ./scripts/licensecheck.js",
-    "hooks": "node ./scripts/hooks.js"
+    "hooks": "node ./scripts/hooks.js",
+    "prettier": "prettier"
   },
   "dependencies": {
-    "@types/node": "^13.1.6",
+    "@types/node": "^13.7.1",
     "chalk": "^3.0.0",
     "fs-extra": "^8.1.0",
     "global": "^4.4.0",
     "license-checker": "^25.0.1",
-    "ts-node": "^8.6.1",
-    "tslint": "^5.20.0",
-    "tslint-config-airbnb": "^5.11.2",
-    "typescript": "^3.7.4",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5",
     "winston": "^3.2.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
   },
   "jest": {
     "coverageReporters": [

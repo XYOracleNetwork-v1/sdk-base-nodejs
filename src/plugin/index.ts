@@ -1,13 +1,16 @@
+/* eslint-disable @typescript-eslint/member-delimiter-style */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/interface-name-prefix */
 
 export interface IXyoPluginWithConfig {
-  config: any,
+  config: any
   plugin: IXyoPlugin
 }
 
 export interface IXyoPluginDelegate {
-  deps: { [key: string]: any; },
-  config: any,
-  graphql: IXyoGraphQlDelegate,
+  deps: { [key: string]: any }
+  config: any
+  graphql: IXyoGraphQlDelegate
   mutex: IXyoBoundWitnessMutexDelegate
 }
 
@@ -19,12 +22,12 @@ export interface IXyoPlugin {
 }
 
 export interface IXyoConfig {
-  port: number,
-  plugins: IXyoPluginConfig[],
+  port: number
+  plugins: IXyoPluginConfig[]
 }
 
 export interface IXyoPluginConfig {
-  type: string,
+  type: string
   config: any
 }
 
