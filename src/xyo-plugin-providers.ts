@@ -1,4 +1,4 @@
-
+/* eslint-disable prettier/prettier */
 export class XyoPluginProviders {
   static BOUND_WITNESS_COLLECTOR_STATS =        'BOUND_WITNESS_COLLECTOR_STATS'
   static BOUND_WITNESS_INSERTER =               'BOUND_WITNESS_INSERTER'

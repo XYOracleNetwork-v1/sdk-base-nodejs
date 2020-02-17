@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { IXyoLog } from './log'
 
-export class XyoBase  {
+export class XyoBase {
   public static log: IXyoLog | undefined
 
   protected logInfo(msg: string) {
@@ -42,5 +43,4 @@ export class XyoBase  {
 
     XyoBase.log.logDebug(msg, this.constructor.name)
   }
-
 }
