@@ -28,7 +28,6 @@
   "scripts": {
     "build": "node ./scripts/build.js",
     "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
-    "xyeslint": "eslint ./scripts",
     "test": "yarn lint && yarn licensecheck",
     "xybuild": "node ./scripts/build.js",
     "xylint": "yarn lint",
