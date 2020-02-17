@@ -16,9 +16,4 @@ module.exports = {
     trailingComma: 0,
     semiColon: 0
   },
-  settings: {
-    react: {
-      version: 'detect'
-    }
-  }
 }
