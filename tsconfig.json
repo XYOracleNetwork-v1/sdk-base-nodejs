@@ -1,21 +1,23 @@
 {
   "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "lib": [ "es5", "es6", "es7", "es2017", "dom", "ES2018", "ESNext"],
-    "allowJs": false,
-    "jsx": "react",
+    "target": "es6",
+    "module": "commonjs",
+    "lib": [
+      "esnext"
+    ],
     "declaration": true,
+    "allowJs": false,
     "declarationMap": true,
+    "jsx": "react",
     "sourceMap": true,
     "strict": true,
     "esModuleInterop": true,
     "noImplicitAny": true,
-    "moduleResolution": "node",
     "suppressImplicitAnyIndexErrors": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
     "outDir": "dist"
   }
 }
