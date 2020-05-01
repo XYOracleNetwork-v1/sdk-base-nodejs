@@ -34,7 +34,9 @@
     "xytest": "yarn lint && yarn license",
     "licensecheck": "node ./scripts/licensecheck.js",
     "hooks": "node ./scripts/hooks.js",
-    "prettier": "prettier"
+    "prettier": "prettier",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "dependencies": {
     "@types/node": "^13.7.1",
@@ -44,7 +46,8 @@
     "license-checker": "^25.0.1",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "snyk": "^1.316.1"
   },
   "prettier": {
     "semi": false,
@@ -68,5 +71,6 @@
   "peerDependencies": {
     "jest": "^25.4.0",
     "ts-jest": "^25.4.0"
-  }
+  },
+  "snyk": true
 }
