@@ -10,10 +10,7 @@ import { IXyoLog } from './xyo-log'
 export class XyoWinstonLogger implements IXyoLog {
   public static buildLogger(): winston.Logger {
     return winston.createLogger({
-      format: winston.format.combine(
-        winston.format.colorize(),
-        winston.format.simple()
-      ),
+      format: winston.format.combine(winston.format.colorize(), winston.format.simple()),
       transports: XyoWinstonLogger.getWinstonTransports(),
     })
   }

@@ -1,10 +1,11 @@
 {
   "$schema": "http://json.schemastore.org/package",
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Base util inspired by XYO",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "files": [
+    "src",
     "dist",
     "scripts",
     "bin",
@@ -18,7 +19,7 @@
     "licensecheck": "./bin/licensecheck",
     "hooks": "./bin/hooks"
   },
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "repository": "https://github.com/XYOracleNetwork/sdk-objectmodel-nodejs",
   "author": "XYO Development Team",
   "license": "LGPL-3.0",
@@ -35,21 +36,12 @@
     "reinstall": "rm -r -f ./node_modules && rm -f ./yarn.lock && rm -f ./yarn-error.log && yarn install && yarn outdated"
   },
   "dependencies": {
-    "@types/node": "^14.14.7",
     "chalk": "^4.1.0",
     "fs-extra": "^9.0.1",
-    "global": "^4.4.0",
-    "license-checker": "^25.0.1",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.5",
     "winston": "^3.2.1"
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "jsxSingleQuote": true
-  },
   "devDependencies": {
+    "@types/node": "^14.14.7",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "eslint": "^7.13.0",
@@ -61,7 +53,11 @@
     "eslint-plugin-simple-import-sort": "^5.0.3",
     "eslint-plugin-sort-export-all": "^1.0.5",
     "eslint-plugin-sort-keys-fix": "^1.1.1",
-    "prettier": "^2.1.2"
+    "global": "^4.4.0",
+    "license-checker": "^25.0.1",
+    "prettier": "^2.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
   },
   "jest": {
     "coverageReporters": [
