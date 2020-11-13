@@ -1,6 +1,7 @@
 {
+  "$schema": "http://json.schemastore.org/package",
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.6.11",
+  "version": "0.7.2",
   "description": "Base util inspired by XYO",
   "main": "dist/index.js",
   "files": [
@@ -10,15 +11,12 @@
     "hooks",
     "templates",
     "tsconfig.json",
-    "tslint.json"
+    ".eslintrc",
+    ".prettierrc"
   ],
   "bin": {
     "licensecheck": "./bin/licensecheck",
-    "hooks": "./bin/hooks",
-    "build": "./bin/build",
-    "lint": "./bin/lint",
-    "xybuild": "./bin/build",
-    "xylint": "./bin/lint"
+    "hooks": "./bin/hooks"
   },
   "types": "dist/index.d.ts",
   "repository": "https://github.com/XYOracleNetwork/sdk-objectmodel-nodejs",
@@ -26,24 +24,24 @@
   "license": "LGPL-3.0",
   "private": false,
   "scripts": {
-    "build": "node ./scripts/build.js",
-    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "yarn lint && yarn licensecheck",
-    "xybuild": "node ./scripts/build.js",
-    "xylint": "yarn lint",
-    "xytest": "yarn lint && yarn license",
     "licensecheck": "node ./scripts/licensecheck.js",
     "hooks": "node ./scripts/hooks.js",
-    "prettier": "prettier"
+    "prettier": "prettier",
+    "build": "tsc",
+    "lint": "NODE_OPTIONS=--max_old_space_size=8192 eslint --ext .js,.ts ./src",
+    "fix": "NODE_OPTIONS=--max_old_space_size=8192 eslint --ext .js,.ts ./src --fix",
+    "clean": "rm -r -f ./node_modules && rm -r -f ./build",
+    "reinstall": "rm -r -f ./node_modules && rm -f ./yarn.lock && rm -f ./yarn-error.log && yarn install && yarn outdated"
   },
   "dependencies": {
-    "@types/node": "^13.7.1",
-    "chalk": "^3.0.0",
-    "fs-extra": "^8.1.0",
+    "@types/node": "^14.14.7",
+    "chalk": "^4.1.0",
+    "fs-extra": "^9.0.1",
     "global": "^4.4.0",
     "license-checker": "^25.0.1",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5",
     "winston": "^3.2.1"
   },
   "prettier": {
@@ -52,13 +50,18 @@
     "jsxSingleQuote": true
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.19.2",
-    "@typescript-eslint/parser": "^2.19.2",
-    "eslint": "^6.8.0",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-no-secrets": "^0.6.8",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "eslint-plugin-sort-export-all": "^1.0.5",
+    "eslint-plugin-sort-keys-fix": "^1.1.1",
+    "prettier": "^2.1.2"
   },
   "jest": {
     "coverageReporters": [
