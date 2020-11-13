@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/package",
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "Base util inspired by XYO",
   "main": "dist/src/index.js",
   "files": [
@@ -25,11 +25,11 @@
   "license": "LGPL-3.0",
   "private": false,
   "scripts": {
-    "test": "yarn lint && yarn licensecheck",
+    "test": "yarn licensecheck && export NODE_ENV=test && yarn jest --no-cache --forceExit --coverage --verbose false --detectOpenHandles",
     "licensecheck": "node ./scripts/licensecheck.js",
     "hooks": "node ./scripts/hooks.js",
     "prettier": "prettier",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json && yarn lint",
     "lint": "NODE_OPTIONS=--max_old_space_size=8192 eslint --ext .js,.ts ./src",
     "fix": "NODE_OPTIONS=--max_old_space_size=8192 eslint --ext .js,.ts ./src --fix",
     "clean": "rm -r -f ./node_modules && rm -r -f ./build",
@@ -54,8 +54,10 @@
     "eslint-plugin-sort-export-all": "^1.0.5",
     "eslint-plugin-sort-keys-fix": "^1.1.1",
     "global": "^4.4.0",
+    "jest": "^26.6.3",
     "license-checker": "^25.0.1",
     "prettier": "^2.1.2",
+    "ts-jest": "^26.4.4",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.5"
   },
