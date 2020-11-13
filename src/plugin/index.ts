@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/member-delimiter-style */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/interface-name-prefix */
-
 export interface IXyoPluginWithConfig {
   config: any
   plugin: IXyoPlugin
