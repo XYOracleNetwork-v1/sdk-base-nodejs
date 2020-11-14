@@ -6,6 +6,7 @@ export class XyoBase {
 
   protected logInfo(msg: string) {
     if (!XyoBase.log) {
+      console.info(msg)
       return
     }
 
@@ -14,6 +15,7 @@ export class XyoBase {
 
   protected logError(msg: string) {
     if (!XyoBase.log) {
+      console.error(msg)
       return
     }
 
@@ -22,6 +24,7 @@ export class XyoBase {
 
   protected logVerbose(msg: string) {
     if (!XyoBase.log) {
+      console.log(msg)
       return
     }
 
@@ -30,6 +33,7 @@ export class XyoBase {
 
   protected logWarning(msg: string) {
     if (!XyoBase.log) {
+      console.warn(msg)
       return
     }
 
@@ -38,6 +42,7 @@ export class XyoBase {
 
   protected logDebug(msg: string) {
     if (!XyoBase.log) {
+      console.log(msg)
       return
     }
 

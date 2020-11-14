@@ -19,7 +19,6 @@
     "composite": true,
     "declarationMap": true,
     "declaration": true,
-    "outDir": "dist"
-  },
-  "include": ["src/**/*.ts"]
+    "outDir": "out/spec"
+  }
 }
