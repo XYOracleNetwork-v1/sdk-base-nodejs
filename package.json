@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/package",
   "name": "@xyo-network/sdk-base-nodejs",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Base util inspired by XYO",
   "main": "dist/src/index.js",
   "files": [
