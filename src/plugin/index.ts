@@ -4,33 +4,33 @@ export interface IXyoPluginWithConfig {
 }
 
 export interface IXyoPluginDelegate {
-  deps: { [key: string]: any }
   config: any
+  deps: { [key: string]: any }
   graphql: IXyoGraphQlDelegate
   mutex: IXyoBoundWitnessMutexDelegate
 }
 
 export interface IXyoPlugin {
   getName(): string
-  getProvides(): string[]
   getPluginDependencies(): string[]
+  getProvides(): string[]
   initialize(delegate: IXyoPluginDelegate): Promise<boolean>
 }
 
 export interface IXyoConfig {
-  port: number
   plugins: IXyoPluginConfig[]
+  port: number
 }
 
 export interface IXyoPluginConfig {
-  type: string
   config: any
+  type: string
 }
 
 export interface IXyoGraphQlDelegate {
-  addType(type: string): void
   addQuery(queryString: string): void
   addResolver(query: string, resolver: any): void
+  addType(type: string): void
 }
 
 export interface IXyoBoundWitnessMutexDelegate {
